@@ -24,13 +24,13 @@ Implementation is based on GS1 General Specifications ver. 18, Jan 2018.
 
 Via Composer
 
-```
+```bash
 $ composer require pmigut/gtin-validator
 ```
 
 Via Git
 
-```
+```bash
 $ git clone git@github.com:pmigut/gtin-validator.git
 ```
 
@@ -38,7 +38,7 @@ $ git clone git@github.com:pmigut/gtin-validator.git
 
 **Basic usage**
 
-```
+```php
 <?php
 
 use Pmigut\GtinValidator\Gtin8;
@@ -52,7 +52,7 @@ var_dump(Gtin8::isValid('12312312'));
 
 `isValid` method expects `string` argument. If `strict_types=1` is declared, `isValid` may throw `TypeError`.
 
-```
+```php
 <?php
 declare(strict_types=1);
 
@@ -67,7 +67,7 @@ var_dump(Gtin8::isValid(12312312));
 
 Codes are validated as is, no leading zeros are added.
 
-```
+```php
 <?php
 
 use Pmigut\GtinValidator\Gtin13;
@@ -81,7 +81,7 @@ var_dump(Gtin13::isValid('906332847'));
 
 ### Testing
 
-```
+```bash
 $ composer test
 ```
 
