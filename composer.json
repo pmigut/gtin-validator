@@ -1,0 +1,43 @@
+{
+    "name": "pmigut/gtin-validator",
+    "description": "This library is a set of static methods for GTIN validation. Methods return true if given string is publicly available GTIN-8, GTIN-12, GTIN-13 or GTIN-14 code. Checks include format, check digit and prefix.",
+    "type": "library",
+    "keywords": [
+        "gtin",
+        "ean",
+        "upc",
+        "validation",
+        "barcodes"
+    ],
+    "authors": [
+        {
+            "name": "Pawel Migut",
+            "homepage": "https://github.com/pmigut",
+            "role": "developer"
+        }
+    ],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/pmigut/gtin-validator/issues"
+    },
+    "require": {
+        "php": "^7.2",
+        "ext-ctype": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pmigut\\GtinValidator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pmigut\\GtinValidator\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
