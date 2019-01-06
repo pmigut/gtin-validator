@@ -1,6 +1,6 @@
 This library is a set of static methods for GTIN validation.
 
-The library is best suited for quick validation of many codes without initiating new object for each code.
+The library is best suited for quick validation of many codes without instantiating new object for each code.
 Simple `true` or `false` is returned and no additional details are provided on failure. Only trade product codes return
  `true`, codes with restricted or special use prefix return `false`.
 
