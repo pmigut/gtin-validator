@@ -21,7 +21,7 @@
         "issues": "https://github.com/pmigut/gtin-validator/issues"
     },
     "require": {
-        "php": "^7.2",
+        "php": "^7.1",
         "ext-ctype": "*"
     },
     "require-dev": {
