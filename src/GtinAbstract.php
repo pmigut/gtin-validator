@@ -66,6 +66,7 @@ abstract class GtinAbstract
         ['613', '613'],     // GS1 Algeria
         ['615', '615'],     // GS1 Nigeria
         ['616', '616'],     // GS1 Kenya
+        ['617', '617'],     // GS1 Cameroon
         ['618', '618'],     // GS1 Ivory Coast
         ['619', '619'],     // GS1 Tunisia
         ['620', '620'],     // GS1 Tanzania
@@ -114,6 +115,7 @@ abstract class GtinAbstract
         ['868', '869'],     // GS1 Turkey
         ['870', '879'],     // GS1 Netherlands
         ['880', '880'],     // GS1 South Korea
+        ['883', '883'],     // GS1 Myanmar
         ['884', '884'],     // GS1 Cambodia
         ['885', '885'],     // GS1 Thailand
         ['888', '888'],     // GS1 Singapore
@@ -126,6 +128,7 @@ abstract class GtinAbstract
         ['940', '949'],     // GS1 New Zealand
         ['950', '950'],     // GS1 Global Office
 //      ['951', '951'],     // GS1 Used to issue General Manager Numbers for the EPC General Identifier (GID) scheme
+//      ['952', '952'],     // Used for demonstrations and examples of the GS1 system
         ['955', '955'],     // GS1 Malaysia
         ['958', '958'],     // GS1 Macau, China
 //      ['960', '969'],     // Reserved for GTIN-8
