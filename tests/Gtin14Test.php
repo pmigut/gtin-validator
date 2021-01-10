@@ -20,4 +20,21 @@ class Gtin14Test extends GtinTestAbstract
             ['30000906332848', true]      // valid
         ];
     }
+
+    /**
+     * @dataProvider isValidProvider
+     * @covers \Pmigut\GtinValidator\Gtin14::isValid
+     */
+    public function testIsValid($gtin, $expected)
+    {
+        parent::testIsValid($gtin, $expected);
+    }
+
+    /**
+     * @covers \Pmigut\GtinValidator\Gtin14::testStrictTypes
+     */
+    public function testStrictTypes()
+    {
+        parent::testStrictTypes();
+    }
 }

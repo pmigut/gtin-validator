@@ -4,14 +4,13 @@ declare(strict_types=1);
 namespace Pmigut\GtinValidator;
 
 use PHPUnit\Framework\TestCase;
+use TypeError;
 
 abstract class GtinTestAbstract extends TestCase
 {
-    /**
-     * @dataProvider isValidProvider
-     */
     public function testIsValid($gtin, $expected)
     {
+        /** @var ValidatorInterface $className */
         $className = static::getTargetClassName();
         $this->assertSame(
             $className::isValid($gtin),
@@ -21,8 +20,9 @@ abstract class GtinTestAbstract extends TestCase
 
     public function testStrictTypes()
     {
+        /** @var ValidatorInterface $className */
         $className = static::getTargetClassName();
-        $this->expectException(\TypeError::class);
+        $this->expectException(TypeError::class);
         $className::isValid(1);
     }
 
