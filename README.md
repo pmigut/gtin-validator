@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/pmigut/gtin-validator.svg?branch=master)](https://travis-ci.org/pmigut/gtin-validator)
-
 This library is a set of static methods for GTIN validation.
 
 The library is best suited for quick validation of many codes without instantiating new object for each code.
