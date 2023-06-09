@@ -20,7 +20,7 @@ Checks performed
 - GS1 prefix
 
 Implementation is based on GS1 General Specifications ver. 18, Jan 2018.
-Prefix list last updated on 10 Jan 2021.
+Prefix list last updated on 9 June 2023.
 
 
 ### Installation

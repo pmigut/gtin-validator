@@ -8,21 +8,20 @@ abstract class GtinAbstract
 {
     public const GS1_PREFIXES = [
         ['001', '019'],     // GS1 US
-//      ['020', '029'],     // Restricted use
+//      ['020', '029'],     // Used to issue Restricted Circulation Numbers within a geographic region (MO defined)
         ['030', '039'],     // GS1 US
-//      ['040', '049'],     // Restricted use
-//      ['050', '059'],     // Reserved for future use
+//      ['040', '049'],     // Used to issue GS1 Restricted Circulation Numbers within a company
+//      ['050', '059'],     // GS1 US reserved for future use
         ['060', '139'],     // GS1 US
-//      ['200', '299'],     // Restricted use
+//      ['200', '299'],     // Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)
         ['300', '379'],     // GS1 France
         ['380', '380'],     // GS1 Bulgaria
-        ['383', '383'],     // GS1 Slovenia
+        ['383', '383'],     // GS1 Slovenija
         ['385', '385'],     // GS1 Croatia
-        ['387', '387'],     // GS1 Bosnia-Herzegovina
+        ['387', '387'],     // GS1 BIH (Bosnia-Herzegovina)
         ['389', '389'],     // GS1 Montenegro
         ['400', '440'],     // GS1 Germany
         ['450', '459'],     // GS1 Japan
-        ['490', '499'],     // GS1 Japan
         ['460', '469'],     // GS1 Russia
         ['470', '470'],     // GS1 Kyrgyzstan
         ['471', '471'],     // GS1 Chinese Taipei
@@ -39,18 +38,19 @@ abstract class GtinAbstract
         ['484', '484'],     // GS1 Moldova
         ['485', '485'],     // GS1 Armenia
         ['486', '486'],     // GS1 Georgia
-        ['487', '487'],     // GS1 Kazakhstan
+        ['487', '487'],     // GS1 Kazakstan
         ['488', '488'],     // GS1 Tajikistan
         ['489', '489'],     // GS1 Hong Kong, China
+        ['490', '499'],     // GS1 Japan
         ['500', '509'],     // GS1 UK
-        ['520', '521'],     // GS1 Greece
+        ['520', '521'],     // GS1 Association Greece
         ['528', '528'],     // GS1 Lebanon
         ['529', '529'],     // GS1 Cyprus
         ['530', '530'],     // GS1 Albania
         ['531', '531'],     // GS1 Macedonia
         ['535', '535'],     // GS1 Malta
         ['539', '539'],     // GS1 Ireland
-        ['540', '549'],     // GS1 Belgium & Luxemburg
+        ['540', '549'],     // GS1 Belgium & Luxembourg
         ['560', '560'],     // GS1 Portugal
         ['569', '569'],     // GS1 Iceland
         ['570', '579'],     // GS1 Denmark
@@ -60,25 +60,32 @@ abstract class GtinAbstract
         ['600', '601'],     // GS1 South Africa
         ['603', '603'],     // GS1 Ghana
         ['604', '604'],     // GS1 Senegal
+//      ['605', '605'],     // Managed by GS1 Global Office for future MO
+//      ['606', '606'],     // Managed by GS1 Global Office for future MO
+        ['607', '607'],     // GS1 Oman
         ['608', '608'],     // GS1 Bahrain
         ['609', '609'],     // GS1 Mauritius
+//      ['610', '610'],     // Managed by GS1 Global Office for future MO
         ['611', '611'],     // GS1 Morocco
         ['613', '613'],     // GS1 Algeria
+//      ['614', '614'],     // Managed by GS1 Global Office for future MO
         ['615', '615'],     // GS1 Nigeria
         ['616', '616'],     // GS1 Kenya
         ['617', '617'],     // GS1 Cameroon
-        ['618', '618'],     // GS1 Ivory Coast
+        ['618', '618'],     // GS1 Côte d'Ivoire
         ['619', '619'],     // GS1 Tunisia
         ['620', '620'],     // GS1 Tanzania
         ['621', '621'],     // GS1 Syria
         ['622', '622'],     // GS1 Egypt
-        ['623', '623'],     // GS1 Brunei
+//      ['623', '623'],     // Managed by GS1 Global Office for future MO
         ['624', '624'],     // GS1 Libya
         ['625', '625'],     // GS1 Jordan
         ['626', '626'],     // GS1 Iran
         ['627', '627'],     // GS1 Kuwait
         ['628', '628'],     // GS1 Saudi Arabia
         ['629', '629'],     // GS1 Emirates
+        ['630', '630'],     // GS1 Qatar
+        ['631', '631'],     // GS1 Namibia
         ['640', '649'],     // GS1 Finland
         ['690', '699'],     // GS1 China
         ['700', '709'],     // GS1 Norway
@@ -90,11 +97,12 @@ abstract class GtinAbstract
         ['743', '743'],     // GS1 Nicaragua
         ['744', '744'],     // GS1 Costa Rica
         ['745', '745'],     // GS1 Panama
-        ['746', '746'],     // GS1 Republic Dominica
+        ['746', '746'],     // GS1 Republica Dominicana
         ['750', '750'],     // GS1 Mexico
         ['754', '755'],     // GS1 Canada
+//      ['758', '758'],     // Managed by GS1 Global Office for future MO
         ['759', '759'],     // GS1 Venezuela
-        ['760', '769'],     // GS1 Switzerland
+        ['760', '769'],     // GS1 Schweiz, Suisse, Svizzera
         ['770', '771'],     // GS1 Colombia
         ['773', '773'],     // GS1 Uruguay
         ['775', '775'],     // GS1 Peru
@@ -103,16 +111,16 @@ abstract class GtinAbstract
         ['780', '780'],     // GS1 Chile
         ['784', '784'],     // GS1 Paraguay
         ['786', '786'],     // GS1 Ecuador
-        ['789', '790'],     // GS1 Brazil
+        ['789', '790'],     // GS1 Brasil
         ['800', '839'],     // GS1 Italy
         ['840', '849'],     // GS1 Spain
         ['850', '850'],     // GS1 Cuba
         ['858', '858'],     // GS1 Slovakia
-        ['859', '859'],     // GS1 Czechia
+        ['859', '859'],     // GS1 Czech
         ['860', '860'],     // GS1 Serbia
         ['865', '865'],     // GS1 Mongolia
         ['867', '867'],     // GS1 North Korea
-        ['868', '869'],     // GS1 Turkey
+        ['868', '869'],     // GS1 Türkiye
         ['870', '879'],     // GS1 Netherlands
         ['880', '880'],     // GS1 South Korea
         ['883', '883'],     // GS1 Myanmar
@@ -121,6 +129,7 @@ abstract class GtinAbstract
         ['888', '888'],     // GS1 Singapore
         ['890', '890'],     // GS1 India
         ['893', '893'],     // GS1 Vietnam
+//      ['894', '894'],     // Managed by GS1 Global Office for future MO
         ['896', '896'],     // GS1 Pakistan
         ['899', '899'],     // GS1 Indonesia
         ['900', '919'],     // GS1 Austria
@@ -130,14 +139,13 @@ abstract class GtinAbstract
 //      ['951', '951'],     // GS1 Used to issue General Manager Numbers for the EPC General Identifier (GID) scheme
 //      ['952', '952'],     // Used for demonstrations and examples of the GS1 system
         ['955', '955'],     // GS1 Malaysia
-        ['958', '958'],     // GS1 Macau, China
-//      ['960', '969'],     // Reserved for GTIN-8
-//      ['977', '977'],     // Reserved for ISSN
-//      ['978', '979'],     // Reserved for ISBN
+        ['958', '958'],     // GS1 Macao, China
+//      ['960', '969'],     // Global Office - GTIN-8
+//      ['977', '977'],     // Serial publications (ISSN)
+//      ['978', '979'],     // Bookland (ISBN)
 //      ['980', '980'],     // Refund receipts
-//      ['981', '984'],     // GS1 coupons
-//      ['985', '989'],     // Reserved for future GS1 coupons
-//      ['990', '999'],     // GS1 coupons
+//      ['981', '983'],     // GS1 coupon identification for common currency areas
+//      ['990', '999'],     // GS1 coupon identification
     ];
 
     public const GS1_000_PREFIXES = [
