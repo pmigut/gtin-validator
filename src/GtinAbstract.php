@@ -158,7 +158,9 @@ abstract class GtinAbstract
 //      ['000', '099'],     // Restricted use
         ['100', '199'],
 //      ['200', '299'],     // Restricted use
-        ['300', '976'],
+        ['300', '951'],
+//      ['952', '952'],     // Used for demonstrations and examples of the GS1 system
+        ['953', '976'],
 //      ['977', '979']      // Reserved for future use
     ];
 
