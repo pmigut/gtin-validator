@@ -1,11 +1,10 @@
 This library is a set of static methods for GTIN validation.
 
-The library is best suited for quick validation of many codes without instantiating new object for each code.
-Simple `true` or `false` is returned and no additional details are provided on failure. Only trade product codes return
- `true`, codes with restricted or special use prefix return `false`.
+The library is best suited for quick validation of many codes without instantiating a new object for each code.
+Simple `true` or `false` is returned and no additional details are provided on failure. Only trade product codes return `true`, codes with restricted or special use prefixes return `false`.
 
 Supported codes
- 
+
 - GTIN-8 (former EAN-8)
 - GTIN-12 (former UPC)
 - GTIN-13 (former EAN-13)
@@ -18,7 +17,7 @@ Checks performed
 - GS1 prefix
 
 Implementation is based on GS1 General Specifications ver. 18, Jan 2018.
-Prefix list last updated on 12 Jan 2025.
+Prefix list verified on 2 Jan 2026.
 
 
 ### Installation
