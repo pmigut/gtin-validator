@@ -31,5 +31,5 @@ abstract class GtinTestAbstract extends TestCase
         return str_replace('Test', '', static::class);
     }
 
-    abstract public function isValidProvider();
+    abstract public static function isValidProvider();
 }

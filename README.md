@@ -20,18 +20,17 @@ Implementation is based on GS1 General Specifications ver. 18, Jan 2018.
 Prefix list verified on 2 Jan 2026.
 
 
-### Installation
+### Requirements
 
-Via Composer
+- PHP 8.2 or later
+- ext-ctype
+
+Users on PHP < 8.2 should pin to `^1.0`.
+
+### Installation
 
 ```bash
 $ composer require pmigut/gtin-validator
-```
-
-Via Git
-
-```bash
-$ git clone git@github.com:pmigut/gtin-validator.git
 ```
 
 ### Examples
@@ -59,8 +58,8 @@ declare(strict_types=1);
 use Pmigut\GtinValidator\Gtin8;
 
 var_dump(Gtin8::isValid(12312312));
-// Output: PHP Fatal error:  Uncaught TypeError: Argument 1 passed to
-// Pmigut\GtinValidator\Gtin8::isValid() must be of the type string, integer given
+// Output: PHP Fatal error:  Uncaught TypeError: Pmigut\GtinValidator\Gtin8::isValid():
+// Argument #1 ($code) must be of type string, int given
 ```
 
 **Leading zeros**
