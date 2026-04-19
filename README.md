@@ -79,7 +79,16 @@ var_dump(Gtin13::isValid('906332847'));
 // Output: false
 ``` 
 
-### Testing
+### Development
+
+The simplest way to contribute is via the included Docker setup (no local PHP required):
+
+```bash
+$ docker compose run --rm php composer install
+$ docker compose run --rm php composer test
+```
+
+If you have PHP 8.2+ and Composer installed locally, you can also run the tests directly:
 
 ```bash
 $ composer test
