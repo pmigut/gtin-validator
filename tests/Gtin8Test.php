@@ -6,7 +6,7 @@ namespace Pmigut\GtinValidator;
 
 class Gtin8Test extends GtinTestAbstract
 {
-    public function isValidProvider()
+    public static function isValidProvider()
     {
         return [
             ['00000000', false],    // only zeros
